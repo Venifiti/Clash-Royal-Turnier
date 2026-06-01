@@ -461,96 +461,96 @@
     "d5m0": {
       "games": [
         {
-          "result": ""
+          "result": "a"
         },
         {
-          "result": ""
+          "result": "a"
         },
         {
-          "result": ""
+          "result": "b"
         },
         {
-          "result": ""
+          "result": "b"
         }
       ]
     },
     "d5m1": {
       "games": [
         {
-          "result": ""
+          "result": "a"
         },
         {
-          "result": ""
+          "result": "a"
         },
         {
-          "result": ""
+          "result": "a"
         },
         {
-          "result": ""
+          "result": "b"
         }
       ]
     },
     "d5m2": {
       "games": [
         {
-          "result": ""
+          "result": "a"
         },
         {
-          "result": ""
+          "result": "a"
         },
         {
-          "result": ""
+          "result": "a"
         },
         {
-          "result": ""
+          "result": "a"
         }
       ]
     },
     "d5m3": {
       "games": [
         {
-          "result": ""
+          "result": "b"
         },
         {
-          "result": ""
+          "result": "b"
         },
         {
-          "result": ""
+          "result": "a"
         },
         {
-          "result": ""
+          "result": "a"
         }
       ]
     },
     "d5m4": {
       "games": [
         {
-          "result": ""
+          "result": "a"
         },
         {
-          "result": ""
+          "result": "a"
         },
         {
-          "result": ""
+          "result": "a"
         },
         {
-          "result": ""
+          "result": "a"
         }
       ]
     },
     "d5m5": {
       "games": [
         {
-          "result": ""
+          "result": "a"
         },
         {
-          "result": ""
+          "result": "a"
         },
         {
-          "result": ""
+          "result": "a"
         },
         {
-          "result": ""
+          "result": "a"
         }
       ]
     },
@@ -1719,170 +1719,170 @@
     "5": [
       [
         [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Goblin Barrel",
+          "Royal Ghost",
+          "Firecracker",
+          "Ice Spirit",
+          "Fireball",
+          "The Log",
+          "Hog Rider",
+          "Furnace"
         ],
         [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Wall Breakers",
+          "Suspicious Bush",
+          "Lightning",
+          "Goblin Demolisher",
+          "Guards",
+          "Rascals",
+          "Electro Wizard",
+          "Dark Prince"
         ],
         [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Archers",
+          "Magic Archer",
+          "Golden Knight",
+          "Poison",
+          "Giant Snowball",
+          "Skeletons",
+          "Electro Giant",
+          "Tombstone"
         ],
         [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Golem",
+          "Bats",
+          "Princess",
+          "Mini P.E.K.K.A",
+          "Tesla",
+          "Knight",
+          "Skeleton Army",
+          "Baby Dragon"
         ]
       ],
       [
         [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Firecracker",
+          "Mini P.E.K.K.A",
+          "Skeleton Army",
+          "Valkyrie",
+          "Tesla",
+          "Princess",
+          "Bats",
+          "Golem"
         ],
         [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Mega Knight",
+          "Golden Knight",
+          "Bowler",
+          "Archers",
+          "Guards",
+          "Bomb Tower",
+          "Minions",
+          "Zap"
         ],
         [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Executioner",
+          "Boss Bandit",
+          "Royal Hogs",
+          "Knight",
+          "Giant Snowball",
+          "Tombstone",
+          "Mega Minion",
+          "The Log"
         ],
         [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Witch",
+          "Inferno Dragon",
+          "Archer Queen",
+          "Electro Giant",
+          "Arrows",
+          "Bomber",
+          "Cannon",
+          "Goblin Gang"
         ]
       ],
       [
         [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Mega Knight",
+          "Mighty Miner",
+          "Golden Knight",
+          "Baby Dragon",
+          "Goblin Gang",
+          "Elite Barbarians",
+          "Skeleton Army",
+          "Electro Wizard"
         ],
         [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Wizard",
+          "Bowler",
+          "Giant",
+          "Elixir Golem",
+          "Furnace",
+          "Royal Giant",
+          "Skeletons",
+          "Void"
         ],
         [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Valkyrie",
+          "Goblins",
+          "Barbarians",
+          "Hog Rider",
+          "Arrows",
+          "Mortar",
+          "Musketeer",
+          "Skeleton Dragons"
         ],
         [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Electro Dragon",
+          "Mini P.E.K.K.A",
+          "Firecracker",
+          "Night Witch",
+          "Zap",
+          "Golem",
+          "Goblin Barrel",
+          "Lightning"
         ]
       ],
       [
         [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Inferno Dragon",
+          "Mirror",
+          "Royal Ghost",
+          "Sparky",
+          "Executioner",
+          "Royal Recruits",
+          "Elixir Golem",
+          "Magic Archer"
         ],
         [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Giant",
+          "Prince",
+          "Dark Prince",
+          "Tombstone",
+          "Minions",
+          "Fireball",
+          "Arrows",
+          "Zap"
         ],
         [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Mega Knight",
+          "Wall Breakers",
+          "Goblin Barrel",
+          "Princess",
+          "Bats",
+          "Inferno Tower",
+          "Giant Snowball",
+          "Goblin Gang"
         ],
         [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Hog Rider",
+          "Earthquake",
+          "Cannon",
+          "Musketeer",
+          "Ice Spirit",
+          "The Log",
+          "Valkyrie",
+          "Skeletons"
         ]
       ]
     ],
@@ -2737,7 +2737,7 @@
       ]
     ]
   },
-  "revision": 676,
-  "updatedAt": 1779770484500,
-  "updatedBy": "13272e97-8598-4db1-a796-e49c8a81c2d7"
+  "revision": 830,
+  "updatedAt": 1780296141727,
+  "updatedBy": "3b28a6b9-556f-4794-a723-b38b6ba7a90c"
 }
