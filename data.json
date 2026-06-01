@@ -1,0 +1,2743 @@
+{
+  "version": 5,
+  "settings": {
+    "tournamentName": "Clash Format Turnier",
+    "dayCount": 10,
+    "firstRoundDays": 5
+  },
+  "days": [
+    {
+      "title": "Spieltag 1",
+      "date": "2026-05-03",
+      "time": "21:00",
+      "note": "Luki hat Karte doppelt gespielt"
+    },
+    {
+      "title": "Spieltag 2",
+      "date": "2026-05-10",
+      "time": "20:45",
+      "note": ""
+    },
+    {
+      "title": "Spieltag 3",
+      "date": "0206-05-17",
+      "time": "20:30",
+      "note": ""
+    },
+    {
+      "title": "Spieltag 4",
+      "date": "2026-05-25",
+      "time": "20:30",
+      "note": "Luki hat Karte doppelt gespielt"
+    },
+    {
+      "title": "Spieltag 5",
+      "date": "",
+      "time": "",
+      "note": ""
+    },
+    {
+      "title": "Spieltag 6",
+      "date": "",
+      "time": "",
+      "note": ""
+    },
+    {
+      "title": "Spieltag 7",
+      "date": "",
+      "time": "",
+      "note": ""
+    },
+    {
+      "title": "Spieltag 8",
+      "date": "",
+      "time": "",
+      "note": ""
+    },
+    {
+      "title": "Spieltag 9",
+      "date": "",
+      "time": "",
+      "note": ""
+    },
+    {
+      "title": "Spieltag 10",
+      "date": "",
+      "time": "",
+      "note": ""
+    }
+  ],
+  "players": [
+    "Lukas",
+    "Darell",
+    "Georg",
+    "Chris"
+  ],
+  "results": {
+    "d1m0": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        }
+      ]
+    },
+    "d1m1": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "b"
+        },
+        {
+          "result": "b"
+        }
+      ]
+    },
+    "d1m2": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        }
+      ]
+    },
+    "d1m3": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "b"
+        },
+        {
+          "result": "b"
+        }
+      ]
+    },
+    "d1m4": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        }
+      ]
+    },
+    "d1m5": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        }
+      ]
+    },
+    "d2m0": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "b"
+        }
+      ]
+    },
+    "d2m1": {
+      "games": [
+        {
+          "result": "b"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        }
+      ]
+    },
+    "d2m2": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        }
+      ]
+    },
+    "d2m3": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "b"
+        },
+        {
+          "result": "b"
+        },
+        {
+          "result": "b"
+        }
+      ]
+    },
+    "d2m4": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        }
+      ]
+    },
+    "d2m5": {
+      "games": [
+        {
+          "result": "b"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        }
+      ]
+    },
+    "d3m0": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "b"
+        }
+      ]
+    },
+    "d3m1": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "b"
+        },
+        {
+          "result": "b"
+        }
+      ]
+    },
+    "d3m2": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "b"
+        }
+      ]
+    },
+    "d3m3": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "b"
+        },
+        {
+          "result": "b"
+        }
+      ]
+    },
+    "d3m4": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "b"
+        }
+      ]
+    },
+    "d3m5": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "b"
+        },
+        {
+          "result": "b"
+        }
+      ]
+    },
+    "d4m0": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "b"
+        }
+      ]
+    },
+    "d4m1": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "b"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "b"
+        }
+      ]
+    },
+    "d4m2": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        }
+      ]
+    },
+    "d4m3": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "b"
+        }
+      ]
+    },
+    "d4m4": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "b"
+        }
+      ]
+    },
+    "d4m5": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "b"
+        }
+      ]
+    },
+    "d5m0": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "b"
+        },
+        {
+          "result": "b"
+        }
+      ]
+    },
+    "d5m1": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "b"
+        }
+      ]
+    },
+    "d5m2": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        }
+      ]
+    },
+    "d5m3": {
+      "games": [
+        {
+          "result": "b"
+        },
+        {
+          "result": "b"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        }
+      ]
+    },
+    "d5m4": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        }
+      ]
+    },
+    "d5m5": {
+      "games": [
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        },
+        {
+          "result": "a"
+        }
+      ]
+    },
+    "d6m0": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d6m1": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d6m2": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d6m3": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d6m4": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d6m5": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d7m0": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d7m1": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d7m2": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d7m3": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d7m4": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d7m5": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d8m0": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d8m1": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d8m2": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d8m3": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d8m4": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d8m5": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d9m0": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d9m1": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d9m2": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d9m3": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d9m4": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d9m5": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d10m0": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d10m1": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d10m2": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d10m3": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d10m4": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    },
+    "d10m5": {
+      "games": [
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        },
+        {
+          "result": ""
+        }
+      ]
+    }
+  },
+  "dayDecks": {
+    "1": [
+      [
+        [
+          "Knight",
+          "Hog Rider",
+          "Firecracker",
+          "Vines",
+          "Goblin Barrel",
+          "Mighty Miner",
+          "Berserker",
+          "Skeleton Army"
+        ],
+        [
+          "Baby Dragon",
+          "Golem",
+          "Princess",
+          "Tesla",
+          "Bats",
+          "Valkyrie",
+          "Skeleton Army",
+          "Mini P.E.K.K.A"
+        ],
+        [
+          "Royal Hogs",
+          "Goblin Cage",
+          "Barbarian Barrel",
+          "The Log",
+          "Spear Goblins",
+          "Skeleton Dragons",
+          "Skeletons",
+          "Poison"
+        ],
+        [
+          "Mega Knight",
+          "Ice Golem",
+          "Little Prince",
+          "Graveyard",
+          "Arrows",
+          "Ice Spirit",
+          "Goblins",
+          "Furnace"
+        ]
+      ],
+      [
+        [
+          "Ice Wizard",
+          "Vines",
+          "Berserker",
+          "Ice Golem",
+          "Inferno Dragon",
+          "Boss Bandit",
+          "Furnace",
+          "Tombstone"
+        ],
+        [
+          "Baby Dragon",
+          "Mini P.E.K.K.A",
+          "Skeleton Army",
+          "Princess",
+          "Tesla",
+          "Golem",
+          "Valkyrie",
+          "Bats"
+        ],
+        [
+          "Firecracker",
+          "Golden Knight",
+          "Mega Knight",
+          "Bowler",
+          "Minions",
+          "Giant Snowball",
+          "Bomb Tower",
+          "Guards"
+        ],
+        [
+          "Royal Hogs",
+          "Knight",
+          "Witch",
+          "Balloon",
+          "Freeze",
+          "Miner",
+          "Goblin Gang",
+          "Cannon"
+        ]
+      ],
+      [
+        [
+          "Archers",
+          "Golem",
+          "Bomber",
+          "Night Witch",
+          "Firecracker",
+          "Electro Dragon",
+          "Zap",
+          "Lightning"
+        ],
+        [
+          "Hog Rider",
+          "Valkyrie",
+          "Bats",
+          "Fireball",
+          "Cannon",
+          "Arrows",
+          "Knight",
+          "Dart Goblin"
+        ],
+        [
+          "Tesla",
+          "Mini P.E.K.K.A",
+          "Magic Archer",
+          "Giant Snowball",
+          "Minions",
+          "Void",
+          "Battle Ram",
+          "Spear Goblins"
+        ],
+        [
+          "Mega Knight",
+          "Mighty Miner",
+          "Baby Dragon",
+          "Goblin Gang",
+          "Goblin Barrel",
+          "Skeleton Army",
+          "Electro Wizard",
+          "Golden Knight"
+        ]
+      ],
+      [
+        [
+          "Firecracker",
+          "Ice Wizard",
+          "Cannon",
+          "Electro Wizard",
+          "Skeleton Barrel",
+          "Suspicious Bush",
+          "Royal Hogs",
+          "The Log"
+        ],
+        [
+          "Minions",
+          "Battle Ram",
+          "Knight",
+          "Valkyrie",
+          "Arrows",
+          "Skeleton Dragons",
+          "Mortar",
+          "Barbarians"
+        ],
+        [
+          "Witch",
+          "Musketeer",
+          "Ice Spirit",
+          "Mega Knight",
+          "Baby Dragon",
+          "Fireball",
+          "Tesla",
+          "Guards"
+        ],
+        [
+          "Hog Rider",
+          "Spear Goblins",
+          "Bomb Tower",
+          "Skeleton Army",
+          "Wizard",
+          "Goblin Barrel",
+          "Mini P.E.K.K.A",
+          "Poison"
+        ]
+      ]
+    ],
+    "2": [
+      [
+        [
+          "Berserker",
+          "Giant Snowball",
+          "Goblin Hut",
+          "Giant Skeleton",
+          "Zappies",
+          "Furnace",
+          "Graveyard",
+          "Poison"
+        ],
+        [
+          "Fireball",
+          "Golden Knight",
+          "Ice Golem",
+          "Electro Wizard",
+          "Suspicious Bush",
+          "Dark Prince",
+          "Rascals",
+          "Wall Breakers"
+        ],
+        [
+          "Lightning",
+          "Hog Rider",
+          "Mighty Miner",
+          "Valkyrie",
+          "Guards",
+          "Firecracker",
+          "Goblin Barrel",
+          "Electro Wizard"
+        ],
+        [
+          "Golem",
+          "Mini P.E.K.K.A",
+          "Skeleton Army",
+          "Bats",
+          "Knight",
+          "Princess",
+          "Tesla",
+          "Baby Dragon"
+        ]
+      ],
+      [
+        [
+          "Valkyrie",
+          "Skeleton Army",
+          "Baby Dragon",
+          "Mini P.E.K.K.A",
+          "Golem",
+          "Tesla",
+          "Princess",
+          "Bats"
+        ],
+        [
+          "Firecracker",
+          "Golden Knight",
+          "Mega Knight",
+          "Bowler",
+          "Guards",
+          "Bomb Tower",
+          "Minions",
+          "Giant Snowball"
+        ],
+        [
+          "Witch",
+          "Boss Bandit",
+          "Magic Archer",
+          "Ice Wizard",
+          "Tombstone",
+          "Freeze",
+          "Royal Ghost",
+          "Goblin Gang"
+        ],
+        [
+          "Royal Hogs",
+          "Vines",
+          "Berserker",
+          "Cannon",
+          "Lumberjack",
+          "Balloon",
+          "Knight",
+          "Monk"
+        ]
+      ],
+      [
+        [
+          "Electro Dragon",
+          "Zap",
+          "Firecracker",
+          "Night Witch",
+          "Archers",
+          "Golem",
+          "Lightning",
+          "Bomber"
+        ],
+        [
+          "Hog Rider",
+          "Valkyrie",
+          "Goblins",
+          "Barbarians",
+          "Arrows",
+          "Mortar",
+          "Musketeer",
+          "Skeleton Dragons"
+        ],
+        [
+          "Wizard",
+          "Mini P.E.K.K.A",
+          "Magic Archer",
+          "Elixir Golem",
+          "Skeletons",
+          "Royal Giant",
+          "Furnace",
+          "Void"
+        ],
+        [
+          "Mega Knight",
+          "Mighty Miner",
+          "Baby Dragon",
+          "Golden Knight",
+          "Goblin Gang",
+          "Goblin Barrel",
+          "Skeleton Army",
+          "Electro Wizard"
+        ]
+      ],
+      [
+        [
+          "Goblin Barrel",
+          "Hog Rider",
+          "Bomb Tower",
+          "Spear Goblins",
+          "Skeleton Army",
+          "The Log",
+          "Mini P.E.K.K.A",
+          "Poison"
+        ],
+        [
+          "Golem",
+          "Barbarians",
+          "Skeleton Dragons",
+          "Battle Ram",
+          "Dark Prince",
+          "Earthquake",
+          "Zap",
+          "Flying Machine"
+        ],
+        [
+          "Royal Hogs",
+          "Firecracker",
+          "Ice Wizard",
+          "Cannon",
+          "Electro Wizard",
+          "Skeleton Barrel",
+          "Giant Snowball",
+          "Suspicious Bush"
+        ],
+        [
+          "Mega Knight",
+          "Guards",
+          "Ice Spirit",
+          "Arrows",
+          "Graveyard",
+          "Zappies",
+          "Bandit",
+          "Wall Breakers"
+        ]
+      ]
+    ],
+    "3": [
+      [
+        [
+          "Lava Hound",
+          "Barbarians",
+          "Tombstone",
+          "Giant Snowball",
+          "Zap",
+          "Flying Machine",
+          "Miner",
+          "Spirit Empress"
+        ],
+        [
+          "Royal Hogs",
+          "Goblin Cage",
+          "Firecracker",
+          "Poison",
+          "Spear Goblins",
+          "The Log",
+          "Skeleton Dragons",
+          "Berserker"
+        ],
+        [
+          "Goblin Hut",
+          "Graveyard",
+          "Arrows",
+          "Dark Prince",
+          "Knight",
+          "Barbarian Barrel",
+          "Furnace",
+          "Royal Delivery"
+        ],
+        [
+          "Royal Giant",
+          "Cannon",
+          "Goblins",
+          "Lightning",
+          "Electro Spirit",
+          "Bandit",
+          "Vines",
+          "Hunter"
+        ]
+      ],
+      [
+        [
+          "Baby Dragon",
+          "Mini P.E.K.K.A",
+          "Skeleton Army",
+          "Valkyrie",
+          "Tesla",
+          "Princess",
+          "Bats",
+          "Golem"
+        ],
+        [
+          "Firecracker",
+          "Golden Knight",
+          "Mega Knight",
+          "Bowler",
+          "Guards",
+          "Bomb Tower",
+          "Minions",
+          "Zap"
+        ],
+        [
+          "Witch",
+          "Goblins",
+          "Magic Archer",
+          "Ice Wizard",
+          "Tombstone",
+          "Giant Snowball",
+          "Sparky",
+          "Giant Skeleton"
+        ],
+        [
+          "Royal Hogs",
+          "Boss Bandit",
+          "Inferno Dragon",
+          "Arrows",
+          "Berserker",
+          "Electro Wizard",
+          "Cannon",
+          "Lumberjack"
+        ]
+      ],
+      [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      [
+        [
+          "Hog Rider",
+          "The Log",
+          "Bomb Tower",
+          "Cannon",
+          "Knight",
+          "Ice Spirit",
+          "Fireball",
+          "Spear Goblins"
+        ],
+        [
+          "Royal Hogs",
+          "Firecracker",
+          "Archers",
+          "Tesla",
+          "Valkyrie",
+          "Skeleton Army",
+          "Rocket",
+          "Giant Snowball"
+        ],
+        [
+          "Golem",
+          "Night Witch",
+          "Baby Dragon",
+          "Tornado",
+          "Mini P.E.K.K.A",
+          "Arrows",
+          "Cannon Cart",
+          "Bomber"
+        ],
+        [
+          "Mega Knight",
+          "Bandit",
+          "Bats",
+          "Wizard",
+          "Tombstone",
+          "Fire Spirit",
+          "Poison",
+          "Wall Breakers"
+        ]
+      ]
+    ],
+    "4": [
+      [
+        [
+          "Goblin Demolisher",
+          "Golden Knight",
+          "Royal Delivery",
+          "Tombstone",
+          "Suspicious Bush",
+          "Mini P.E.K.K.A",
+          "Fireball",
+          "Wall Breakers"
+        ],
+        [
+          "Lava Hound",
+          "Barbarians",
+          "Cannon",
+          "Giant Snowball",
+          "Zap",
+          "Flying Machine",
+          "Miner",
+          "Spirit Empress"
+        ],
+        [
+          "Goblin Barrel",
+          "Hog Rider",
+          "Goblin Machine",
+          "Ice Spirit",
+          "Berserker",
+          "Firecracker",
+          "Poison",
+          "The Log"
+        ],
+        [
+          "Tesla",
+          "Knight",
+          "Skeleton King",
+          "Skeleton Army",
+          "Skeletons",
+          "Graveyard",
+          "Witch",
+          "Lightning"
+        ]
+      ],
+      [
+        [
+          "Executioner",
+          "Boss Bandit",
+          "Barbarians",
+          "Bandit",
+          "Giant Snowball",
+          "Tombstone",
+          "Ram Rider",
+          "Zap"
+        ],
+        [
+          "Firecracker",
+          "Mini P.E.K.K.A",
+          "Skeleton Army",
+          "Valkyrie",
+          "Princess",
+          "Golem",
+          "Bats",
+          "Tesla"
+        ],
+        [
+          "Witch",
+          "Inferno Dragon",
+          "Electro Giant",
+          "Arrows",
+          "Bomber",
+          "Cannon",
+          "Goblin Gang",
+          "Archer Queen"
+        ],
+        [
+          "Mega Knight",
+          "Bowler",
+          "Golden Knight",
+          "Archers",
+          "Guards",
+          "Minions",
+          "Electro Spirit",
+          "Bomb Tower"
+        ]
+      ],
+      [
+        [
+          "Skeletons",
+          "Electro Spirit",
+          "Royal Ghost",
+          "Royal Giant",
+          "Barbarian Barrel",
+          "Fisherman",
+          "Rascals",
+          "Hunter"
+        ],
+        [
+          "Dark Prince",
+          "Minions",
+          "Zap",
+          "Poison",
+          "P.E.K.K.A",
+          "Battle Ram",
+          "Electro Wizard",
+          "Bandit"
+        ],
+        [
+          "Goblin Barrel",
+          "Cannon",
+          "Dart Goblin",
+          "Arrows",
+          "Goblin Gang",
+          "Cannon Cart",
+          "Royal Recruits",
+          "Goblinstein"
+        ],
+        [
+          "Royal Hogs",
+          "Skeleton King",
+          "Fireball",
+          "Spear Goblins",
+          "Zappies",
+          "Knight",
+          "Flying Machine",
+          "Goblin Cage"
+        ]
+      ],
+      [
+        [
+          "Hog Rider",
+          "Earthquake",
+          "Valkyrie",
+          "Firecracker",
+          "Cannon",
+          "Skeletons",
+          "Ice Spirit",
+          "The Log"
+        ],
+        [
+          "Mega Knight",
+          "Goblin Barrel",
+          "Princess",
+          "Bats",
+          "Inferno Tower",
+          "Giant Snowball",
+          "Skeleton Army",
+          "Wall Breakers"
+        ],
+        [
+          "Giant",
+          "Mini P.E.K.K.A",
+          "Musketeer",
+          "Bomber",
+          "Tombstone",
+          "Arrows",
+          "Zappies",
+          "Electro Spirit"
+        ],
+        [
+          "Royal Hogs",
+          "Knight",
+          "Dart Goblin",
+          "Barbarian Barrel",
+          "Tesla",
+          "Archers",
+          "Fire Spirit",
+          "Fireball"
+        ]
+      ]
+    ],
+    "5": [
+      [
+        [
+          "Goblin Barrel",
+          "Royal Ghost",
+          "Firecracker",
+          "Ice Spirit",
+          "Fireball",
+          "The Log",
+          "Hog Rider",
+          "Furnace"
+        ],
+        [
+          "Wall Breakers",
+          "Suspicious Bush",
+          "Lightning",
+          "Goblin Demolisher",
+          "Guards",
+          "Rascals",
+          "Electro Wizard",
+          "Dark Prince"
+        ],
+        [
+          "Archers",
+          "Magic Archer",
+          "Golden Knight",
+          "Poison",
+          "Giant Snowball",
+          "Skeletons",
+          "Electro Giant",
+          "Tombstone"
+        ],
+        [
+          "Golem",
+          "Bats",
+          "Princess",
+          "Mini P.E.K.K.A",
+          "Tesla",
+          "Knight",
+          "Skeleton Army",
+          "Baby Dragon"
+        ]
+      ],
+      [
+        [
+          "Firecracker",
+          "Mini P.E.K.K.A",
+          "Skeleton Army",
+          "Valkyrie",
+          "Tesla",
+          "Princess",
+          "Bats",
+          "Golem"
+        ],
+        [
+          "Mega Knight",
+          "Golden Knight",
+          "Bowler",
+          "Archers",
+          "Guards",
+          "Bomb Tower",
+          "Minions",
+          "Zap"
+        ],
+        [
+          "Executioner",
+          "Boss Bandit",
+          "Royal Hogs",
+          "Knight",
+          "Giant Snowball",
+          "Tombstone",
+          "Mega Minion",
+          "The Log"
+        ],
+        [
+          "Witch",
+          "Inferno Dragon",
+          "Archer Queen",
+          "Electro Giant",
+          "Arrows",
+          "Bomber",
+          "Cannon",
+          "Goblin Gang"
+        ]
+      ],
+      [
+        [
+          "Mega Knight",
+          "Mighty Miner",
+          "Golden Knight",
+          "Baby Dragon",
+          "Goblin Gang",
+          "Elite Barbarians",
+          "Skeleton Army",
+          "Electro Wizard"
+        ],
+        [
+          "Wizard",
+          "Bowler",
+          "Giant",
+          "Elixir Golem",
+          "Furnace",
+          "Royal Giant",
+          "Skeletons",
+          "Void"
+        ],
+        [
+          "Valkyrie",
+          "Goblins",
+          "Barbarians",
+          "Hog Rider",
+          "Arrows",
+          "Mortar",
+          "Musketeer",
+          "Skeleton Dragons"
+        ],
+        [
+          "Electro Dragon",
+          "Mini P.E.K.K.A",
+          "Firecracker",
+          "Night Witch",
+          "Zap",
+          "Golem",
+          "Goblin Barrel",
+          "Lightning"
+        ]
+      ],
+      [
+        [
+          "Inferno Dragon",
+          "Mirror",
+          "Royal Ghost",
+          "Sparky",
+          "Executioner",
+          "Royal Recruits",
+          "Elixir Golem",
+          "Magic Archer"
+        ],
+        [
+          "Giant",
+          "Prince",
+          "Dark Prince",
+          "Tombstone",
+          "Minions",
+          "Fireball",
+          "Arrows",
+          "Zap"
+        ],
+        [
+          "Mega Knight",
+          "Wall Breakers",
+          "Goblin Barrel",
+          "Princess",
+          "Bats",
+          "Inferno Tower",
+          "Giant Snowball",
+          "Goblin Gang"
+        ],
+        [
+          "Hog Rider",
+          "Earthquake",
+          "Cannon",
+          "Musketeer",
+          "Ice Spirit",
+          "The Log",
+          "Valkyrie",
+          "Skeletons"
+        ]
+      ]
+    ],
+    "6": [
+      [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    ],
+    "7": [
+      [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    ],
+    "8": [
+      [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    ],
+    "9": [
+      [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    ],
+    "10": [
+      [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    ]
+  },
+  "revision": 830,
+  "updatedAt": 1780296141727,
+  "updatedBy": "3b28a6b9-556f-4794-a723-b38b6ba7a90c"
+}
