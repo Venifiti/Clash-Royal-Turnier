@@ -737,7 +737,7 @@ button,.btn,.tab,.pill,.cardinput,.deckcard,.builder-card-choice,.pick-card{
 <body>
 <header class="top">
   <div class="topin">
-    <div class="brand"><div class="logo">👑</div><div><h1 id="appTitle">Clash Royale Turnier-Tracker Handy</h1><p id="syncState">Lade...</p></div></div>
+    <div class="brand"><div class="logo">馃憫</div><div><h1 id="appTitle">Clash Royale Turnier-Tracker Handy</h1><p id="syncState">Lade...</p></div></div>
     <div class="actions">
       <button class="btn small hidephone" id="saveBtn">Speichern</button>
       <button class="btn small good" id="shareBtn">Link teilen</button>
@@ -759,13 +759,13 @@ button,.btn,.tab,.pill,.cardinput,.deckcard,.builder-card-choice,.pick-card{
 <div class="picker" id="cardPicker">
   <div class="picker-head">
     <input class="input" id="pickerSearch" placeholder="Karte suchen...">
-    <button class="picker-close" id="pickerClose">Schließen</button>
+    <button class="picker-close" id="pickerClose">Schlie脽en</button>
   </div>
   <div class="picker-grid" id="pickerGrid"></div>
 </div>
 <div class="footer">
   <div class="footerin iphone-footerin">
-    <button class="btn" id="mDash">Übersicht</button>
+    <button class="btn" id="mDash">脺bersicht</button>
     <button class="btn primary" id="mInput">Eingabe</button>
     <button class="btn" id="mDecks">Decks</button>
     <button class="btn" id="mBuilder">Deckbauer</button>
@@ -784,7 +784,7 @@ const CARD_BY_KEY = Object.fromEntries(CARDS.map(c=>[c.key,c]));
 const STORAGE_KEY = "cr_github_pages_auto_data_v2";
 const AUTO_DATA_CACHE_KEY = STORAGE_KEY + "_auto_data_meta";
 const GAMES=4, PLAYERS=4, DECKS_PER_PLAYER_PER_DAY=4;
-const TABS=[["dashboard","Übersicht"],["input","Spieltag eingeben"],["decks","Spieltag-Decks"],["cards","Karten"],["settings","Setup & Einstellungen"],["builder","Deckbauer"]];
+const TABS=[["dashboard","脺bersicht"],["input","Spieltag eingeben"],["decks","Spieltag-Decks"],["cards","Karten"],["settings","Setup & Einstellungen"],["builder","Deckbauer"]];
 let tab="dashboard", selectedDay=1, selectedMatch=0, remoteReady=false, saveTimer=null, isApplyingRemote=false, renderSettingsTimer=null, copiedDeck=null;
 let activePickerInput=null;
 let builderState={include:[],exclude:[],generated:null,attempt:0,excludeDay:1,excludePlayer:'all',excludeDeck:0};
@@ -871,13 +871,13 @@ function loadLocal(){
 
 async function loadAutoDataJson(force=false){
   if(location.protocol === "file:"){
-    updateSyncLabel("Lokale Datei · data.json wird erst online automatisch geladen");
+    updateSyncLabel("Lokale Datei 路 data.json wird erst online automatisch geladen");
     return false;
   }
   try{
     const res = await fetch(AUTO_DATA_URL + "?t=" + Date.now(), {cache:"no-store"});
     if(!res.ok){
-      updateSyncLabel("Keine data.json gefunden · lokaler Stand");
+      updateSyncLabel("Keine data.json gefunden 路 lokaler Stand");
       return false;
     }
 
@@ -903,7 +903,7 @@ async function loadAutoDataJson(force=false){
       return true;
     }
 
-    updateSyncLabel("data.json aktuell · lokaler Stand");
+    updateSyncLabel("data.json aktuell 路 lokaler Stand");
     return true;
   }catch(e){
     console.warn("data.json konnte nicht geladen werden", e);
@@ -917,19 +917,19 @@ function reloadAutoDataJson(){
 
 function dayCount(){return Math.max(1, Math.min(40, Number(state.settings.dayCount||10)))}
 function totalSingleGames(){return dayCount()*6*GAMES}
-function phaseLabel(day){ const first=Number(state.settings.firstRoundDays||Math.ceil(dayCount()/2)); if(first<=0) return "Turnier"; if(day<=first) return "Hinrunde"; if(first<dayCount()) return "Rückrunde"; return "Turnier"; }
+function phaseLabel(day){ const first=Number(state.settings.firstRoundDays||Math.ceil(dayCount()/2)); if(first<=0) return "Turnier"; if(day<=first) return "Hinrunde"; if(first<dayCount()) return "R眉ckrunde"; return "Turnier"; }
 function dayMeta(day){ ensureDays(state); return state.days[day-1] || {title:`Spieltag ${day}`,date:"",time:"",note:""}}
 function dayLabel(day){ const d=dayMeta(day); return d.title || `Spieltag ${day}`; }
-function formatDayDate(day){const d=dayMeta(day), parts=[]; if(d.date){ try{ parts.push(new Date(d.date+"T00:00:00").toLocaleDateString("de-DE",{weekday:"short",day:"2-digit",month:"2-digit",year:"numeric"})); }catch(e){parts.push(d.date)} } if(d.time) parts.push(d.time+" Uhr"); return parts.join(" · ");}
+function formatDayDate(day){const d=dayMeta(day), parts=[]; if(d.date){ try{ parts.push(new Date(d.date+"T00:00:00").toLocaleDateString("de-DE",{weekday:"short",day:"2-digit",month:"2-digit",year:"numeric"})); }catch(e){parts.push(d.date)} } if(d.time) parts.push(d.time+" Uhr"); return parts.join(" 路 ");}
 function saveLocal(){localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); updateSyncLabel(); updateTitle();}
 function bump(render=true){ if(isApplyingRemote) return; state.revision=(state.revision||0)+1; state.updatedAt=Date.now(); state.updatedBy=clientId; ensureDays(state); saveLocal(); scheduleCloudSave(); if(render) renderLight();}
 function bumpNoRender(){ bump(false); }
 function scheduleCloudSave(){ if(!cloudMode||!remoteReady) return; clearTimeout(saveTimer); saveTimer=setTimeout(writeCloud,500);}
 async function writeCloud(){ updateSyncLabel("Lokal gespeichert"); }
 function firebaseConfigured(){return false;}
-async function initFirebase(){ cloudMode=false; remoteReady=false; updateSyncLabel("Handy-Datei · lokal gespeichert"); }
+async function initFirebase(){ cloudMode=false; remoteReady=false; updateSyncLabel("Handy-Datei 路 lokal gespeichert"); }
 function updateTitle(){ const el=document.getElementById("appTitle"); if(el) el.textContent=state.settings.tournamentName || "Clash Royale Turnier-Tracker Handy"; document.title = state.settings.tournamentName || "Clash Royale Turnier-Tracker Handy"; }
-function updateSyncLabel(msg){ const el=document.getElementById("syncState"); if(!el) return; const d=new Date(state.updatedAt||Date.now()).toLocaleString("de-DE",{dateStyle:"short",timeStyle:"short"}); if(msg) el.textContent=msg+" · Turnier: "+tournamentId; else el.textContent=(cloudMode&&remoteReady?"Online synchronisiert":"Lokal gespeichert")+" · "+d+" · Turnier: "+tournamentId;}
+function updateSyncLabel(msg){ const el=document.getElementById("syncState"); if(!el) return; const d=new Date(state.updatedAt||Date.now()).toLocaleString("de-DE",{dateStyle:"short",timeStyle:"short"}); if(msg) el.textContent=msg+" 路 Turnier: "+tournamentId; else el.textContent=(cloudMode&&remoteReady?"Online synchronisiert":"Lokal gespeichert")+" 路 "+d+" 路 Turnier: "+tournamentId;}
 function showToast(msg){const t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1800)}
 function esc(s){return String(s??"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[ch]))}
 function pairings(){return [[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]]}
@@ -946,10 +946,10 @@ function cardHtml(k){let c=CARD_BY_KEY[k]||CARD_BY_NAME[k]; if(!c)return `<div c
 function cardHtmlWithFlags(k,isDup=false,isCrossDup=false){let c=CARD_BY_KEY[k]||CARD_BY_NAME[k]; if(!c)return `<div class="cimg empty">+</div>`; const title=esc(c.name); return `<div class="cimg ${isDup?"dup-card":""} ${isCrossDup?"cross-dup-card":""}" title="${title}"><span class="cost">${c.elixir}</span>${isDup?`<span class="dup-badge">DOPPELT</span>`:""}${isCrossDup?`<span class="cross-dup-badge">SPIELTAG</span>`:""}<img loading="lazy" src="${imgUrl(c)}" alt="${title}" onerror="this.remove();this.parentElement.insertAdjacentHTML('beforeend','<span class=&quot;fallback&quot;>${title}</span>')"></div>`}
 function normDeck(deck){return normDeckRaw(deck)}
 function avg(deck){const names=deck.map(valid).filter(Boolean); if(!names.length)return null; return names.reduce((a,n)=>a+CARD_BY_NAME[n].elixir,0)/names.length}
-function formatAvg(value){return value===null ? "–" : value.toFixed(1).replace(".", ",")}
-function problem(deck){const names=deck.filter(Boolean); const inv=names.filter(n=>!CARD_BY_NAME[n]); if(inv.length)return "Ungültige Karte: "+inv[0]; const v=deck.map(valid).filter(Boolean); if(v.length<8)return "Noch nicht vollständig."; if(new Set(v).size!==8)return "Eine Karte ist doppelt im Deck."; return ""}
+function formatAvg(value){return value===null ? "鈥? : value.toFixed(1).replace(".", ",")}
+function problem(deck){const names=deck.filter(Boolean); const inv=names.filter(n=>!CARD_BY_NAME[n]); if(inv.length)return "Ung眉ltige Karte: "+inv[0]; const v=deck.map(valid).filter(Boolean); if(v.length<8)return "Noch nicht vollst盲ndig."; if(new Set(v).size!==8)return "Eine Karte ist doppelt im Deck."; return ""}
 function playerDecks(pi,d){return getDayDecks(d)[pi].map((deck,idx)=>({deck, index:idx, sig:normDeck(deck)})).filter(x=>x.sig)}
-function dayDeckStatus(day){let complete=0, invalid=0; const dd=getDayDecks(day); for(let p=0;p<PLAYERS;p++) for(let d=0;d<DECKS_PER_PLAYER_PER_DAY;d++){const prob=problem(dd[p][d]); if(!prob) complete++; else if(prob !== "Noch nicht vollständig.") invalid++;} return {complete, invalid, total:PLAYERS*DECKS_PER_PLAYER_PER_DAY};}
+function dayDeckStatus(day){let complete=0, invalid=0; const dd=getDayDecks(day); for(let p=0;p<PLAYERS;p++) for(let d=0;d<DECKS_PER_PLAYER_PER_DAY;d++){const prob=problem(dd[p][d]); if(!prob) complete++; else if(prob !== "Noch nicht vollst盲ndig.") invalid++;} return {complete, invalid, total:PLAYERS*DECKS_PER_PLAYER_PER_DAY};}
 function cardKeySet(deck){return new Set((deck||[]).map(valid).filter(Boolean).map(n=>CARD_BY_NAME[n].key));}
 function overlapCount(a,b){const sa=cardKeySet(a), sb=cardKeySet(b); let count=0; sa.forEach(k=>{if(sb.has(k)) count++;}); return count;}
 function deckRuleReport(d,pi){
@@ -995,13 +995,13 @@ function page(id){document.querySelectorAll(".page").forEach(p=>p.classList.remo
 function renderAll(){ensureDays(state); updateTitle(); renderTabs(); page(tab); renderDashboard(); renderInput(); renderDecks(); renderCards(); renderSettings(); renderBuilder(); updateSyncLabel()}
 function renderLight(){ ensureDays(state); updateTitle(); if(tab==="dashboard") renderDashboard(); if(tab==="decks")renderDecks(); if(tab==="settings")renderSettings(); updateSyncLabel(); }
 function standingsTable(rows){return `<div class="tablewrap"><table><thead><tr><th>#</th><th>Spieler</th><th>Punkte</th><th>Matchbonus</th><th>Einzelpunkte</th><th>Matches</th><th>Einzelspiele</th></tr></thead><tbody>${rows.map((r,i)=>`<tr><td>${i+1}</td><td><b>${esc(r.name)}</b></td><td><b>${r.total}</b></td><td>${r.matchBonus}</td><td>${r.singlePoints}</td><td>${r.mw}S / ${r.md}U / ${r.ml}N</td><td>${r.sw}S / ${r.sl}N</td></tr>`).join("")}</tbody></table></div>`}
-function dayStrip(){return `<div class="strip">${Array.from({length:dayCount()},(_,i)=>{const d=i+1, ds=dayStats(d); return `<button class="pill ${d===selectedDay?"active":ds.complete===6?"good":""}" onclick="selectDay(${d})">ST ${d} · ${phaseLabel(d)} · ${ds.complete}/6</button>`}).join("")}</div>`}
+function dayStrip(){return `<div class="strip">${Array.from({length:dayCount()},(_,i)=>{const d=i+1, ds=dayStats(d); return `<button class="pill ${d===selectedDay?"active":ds.complete===6?"good":""}" onclick="selectDay(${d})">ST ${d} 路 ${phaseLabel(d)} 路 ${ds.complete}/6</button>`}).join("")}</div>`}
 function warningList(){const warnings=[]; for(let d=1;d<=dayCount();d++){for(let p=0;p<PLAYERS;p++){const dup=duplicateDeckReport(d,p); if(!dup.ok) warnings.push(`${dayLabel(d)}: ${state.players[p]} hat innerhalb des Spieltags ein Deck doppelt in den 4 Tagesdecks.`); const cardDup=duplicateCardsAcrossDayReport(d,p); if(!cardDup.ok) warnings.push(`${dayLabel(d)}: ${state.players[p]} verwendet diese Karte(n) mehrfach in den 4 Tagesdecks: ${cardDup.cards.join(", ")}. Jede Karte darf pro Spieltag nur 1x vorkommen.`); if(d>1){const r=deckRuleReport(d,p); if(!r.limitOk) warnings.push(`${dayLabel(d)}: ${state.players[p]} hat ${r.highOverlapCount} Decks mit mehr als 5 gleichen Karten zum Vortag. Erlaubt sind maximal 2.`);}}} return warnings;}
 function renderDashboard(){
   const rows=standings(), done=Array.from({length:dayCount()},(_,i)=>dayStats(i+1).gamesDone).reduce((a,b)=>a+b,0);
   const deckDone=Array.from({length:dayCount()},(_,i)=>dayDeckStatus(i+1).complete).reduce((a,b)=>a+b,0);
   const warnings=warningList();
-  document.getElementById("page-dashboard").innerHTML=`<div class="grid"><div class="panel"><div class="head"><div><h2>${esc(state.settings.tournamentName||"Übersicht")}</h2><p>Pro Spieler werden je Spieltag 4 feste Decks erfasst. 0, 1 oder 2 Decks dürfen mehr als 5 gleiche Karten mit einem Vortagsdeck haben. Alle übrigen Decks dürfen pro Deck höchstens 5 gleiche Karten mit jedem Vortagsdeck haben.</p></div><button class="btn primary" onclick="goInput(1)">Spieltag eingeben</button></div><div class="body"><div class="kpis"><div class="kpi"><div class="label">Einzelspiele</div><div class="num">${done}/${totalSingleGames()}</div><div class="sub">Ergebnisse</div></div><div class="kpi"><div class="label">Spieltage</div><div class="num">${dayCount()}</div><div class="sub">frei einstellbar</div></div><div class="kpi"><div class="label">Tagesdecks</div><div class="num">${deckDone}/${dayCount()*16}</div><div class="sub">4 je Spieler/Tag</div></div><div class="kpi"><div class="label">Warnungen</div><div class="num">${warnings.length}</div><div class="sub">Deckregeln</div></div></div></div></div><div class="grid cols2"><div class="panel"><div class="head"><div><h2>Tabelle</h2><p>Gesamtpunkte aus Matchbonus + Einzelspielen.</p></div></div><div class="body">${standingsTable(rows)}</div></div><div class="panel"><div class="head"><div><h2>Deckregeln</h2><p>4 Tagesdecks pro Spieler. Jede Karte nur 1x pro Spieltag. Bis zu 2 Decks dürfen mehr als 5 gleiche Karten zum Vortag haben; alle übrigen höchstens 5 gleiche Karten zu jedem Vortagsdeck.</p></div></div><div class="body">${warnings.length?warnings.map(w=>`<div class="notice danger" style="margin-bottom:8px">${esc(w)}</div>`).join(""):`<div class="notice good">Aktuell keine Überschreitung.</div>`}</div></div></div><div class="panel"><div class="head"><div><h2>Spieltage</h2><p>Datum, Ergebnisfortschritt und Tagesdeck-Fortschritt.</p></div></div><div class="body"><div class="grid cols3">${Array.from({length:dayCount()},(_,i)=>daySummary(i+1)).join("")}</div></div></div></div>`;
+  document.getElementById("page-dashboard").innerHTML=`<div class="grid"><div class="panel"><div class="head"><div><h2>${esc(state.settings.tournamentName||"脺bersicht")}</h2><p>Pro Spieler werden je Spieltag 4 feste Decks erfasst. 0, 1 oder 2 Decks d眉rfen mehr als 5 gleiche Karten mit einem Vortagsdeck haben. Alle 眉brigen Decks d眉rfen pro Deck h枚chstens 5 gleiche Karten mit jedem Vortagsdeck haben.</p></div><button class="btn primary" onclick="goInput(1)">Spieltag eingeben</button></div><div class="body"><div class="kpis"><div class="kpi"><div class="label">Einzelspiele</div><div class="num">${done}/${totalSingleGames()}</div><div class="sub">Ergebnisse</div></div><div class="kpi"><div class="label">Spieltage</div><div class="num">${dayCount()}</div><div class="sub">frei einstellbar</div></div><div class="kpi"><div class="label">Tagesdecks</div><div class="num">${deckDone}/${dayCount()*16}</div><div class="sub">4 je Spieler/Tag</div></div><div class="kpi"><div class="label">Warnungen</div><div class="num">${warnings.length}</div><div class="sub">Deckregeln</div></div></div></div></div><div class="grid cols2"><div class="panel"><div class="head"><div><h2>Tabelle</h2><p>Gesamtpunkte aus Matchbonus + Einzelspielen.</p></div></div><div class="body">${standingsTable(rows)}</div></div><div class="panel"><div class="head"><div><h2>Deckregeln</h2><p>4 Tagesdecks pro Spieler. Jede Karte nur 1x pro Spieltag. Bis zu 2 Decks d眉rfen mehr als 5 gleiche Karten zum Vortag haben; alle 眉brigen h枚chstens 5 gleiche Karten zu jedem Vortagsdeck.</p></div></div><div class="body">${warnings.length?warnings.map(w=>`<div class="notice danger" style="margin-bottom:8px">${esc(w)}</div>`).join(""):`<div class="notice good">Aktuell keine 脺berschreitung.</div>`}</div></div></div><div class="panel"><div class="head"><div><h2>Spieltage</h2><p>Datum, Ergebnisfortschritt und Tagesdeck-Fortschritt.</p></div></div><div class="body"><div class="grid cols3">${Array.from({length:dayCount()},(_,i)=>daySummary(i+1)).join("")}</div></div></div></div>`;
 }
 function daySummary(d){const ds=dayStats(d); let wc=0; for(let p=0;p<PLAYERS;p++){if(!duplicateDeckReport(d,p).ok)wc++; const rr=deckRuleReport(d,p); if(!rr.limitOk)wc++; wc+=rr.overlapViolations.length;} const when=formatDayDate(d); return `<div class="match-card"><div class="mtitle"><span>${esc(dayLabel(d))}</span><span class="status ${ds.complete===6?"done":"open"}">${ds.complete}/6 Matches</span></div><div class="scoreline"><span>${phaseLabel(d)}</span><b>${ds.gamesDone}/24 Spiele</b><span style="text-align:right">${ds.deckStatus.complete}/16 Decks</span></div>${when?`<div class="notice">${esc(when)}</div>`:""}${wc?`<div class="notice danger">Deckregel: ${wc} Warnung(en)</div>`:`<div class="notice good">Deckregeln ok</div>`}<div class="row"><button class="btn small primary" onclick="goInput(${d})">Ergebnisse & Decks</button></div></div>`}
 function goInput(d){selectedDay=Math.min(Math.max(1,d),dayCount());tab="input";renderAll()} 
@@ -1010,17 +1010,17 @@ function selectDay(d){selectedDay=Math.min(Math.max(1,d),dayCount());selectedMat
 function selectMatch(mi){selectedMatch=mi;renderInput()}
 function renderInput(){
   selectedDay=Math.min(selectedDay,dayCount()); const meta=dayMeta(selectedDay); const when=formatDayDate(selectedDay);
-  document.getElementById("page-input").innerHTML=`<div class="grid"><div class="panel"><div class="head"><div><h2>${esc(dayLabel(selectedDay))} · ${phaseLabel(selectedDay)}</h2><p>${when?esc(when):"Noch kein Datum / keine Uhrzeit eingetragen."}</p></div><button class="btn good" onclick="manualSave()">Speichern</button></div><div class="body">${dayStrip()}${meta.note?`<div class="notice" style="margin-top:12px">${esc(meta.note)}</div>`:""}<div class="notice warn" style="margin-top:12px">Einzelspiele können nur gewonnen/verloren werden. Ein Match ist automatisch unentschieden, wenn beide Spieler je 2 Einzelspiele gewinnen.</div></div></div><div class="layout"><aside class="side"><div class="panel"><div class="head"><div><h2>Matches</h2><p>6 pro Spieltag</p></div></div><div class="body"><div class="grid">${pairings().map((p,mi)=>matchSelector(mi)).join("")}</div></div></div><div class="panel"><div class="head"><div><h2>Deckstatus</h2><p>4 Decks je Spieler</p></div></div><div class="body">${deckStatusBox(selectedDay)}</div></div></aside><section class="panel"><div class="head"><div><h2>${matchTitle(selectedMatch)}</h2><p>Hier werden nur die Ergebnisse der 4 Einzelspiele eingetragen.</p></div><span class="status ${calcMatch(selectedDay,selectedMatch).resultDone===4?"done":"open"}">${calcMatch(selectedDay,selectedMatch).resultDone}/4</span></div><div class="body"><div class="grid">${matchEditor(selectedMatch)}</div></div></section></div>${inlineDayDeckEditor(selectedDay)}</div>`;
+  document.getElementById("page-input").innerHTML=`<div class="grid"><div class="panel"><div class="head"><div><h2>${esc(dayLabel(selectedDay))} 路 ${phaseLabel(selectedDay)}</h2><p>${when?esc(when):"Noch kein Datum / keine Uhrzeit eingetragen."}</p></div><button class="btn good" onclick="manualSave()">Speichern</button></div><div class="body">${dayStrip()}${meta.note?`<div class="notice" style="margin-top:12px">${esc(meta.note)}</div>`:""}<div class="notice warn" style="margin-top:12px">Einzelspiele k枚nnen nur gewonnen/verloren werden. Ein Match ist automatisch unentschieden, wenn beide Spieler je 2 Einzelspiele gewinnen.</div></div></div><div class="layout"><aside class="side"><div class="panel"><div class="head"><div><h2>Matches</h2><p>6 pro Spieltag</p></div></div><div class="body"><div class="grid">${pairings().map((p,mi)=>matchSelector(mi)).join("")}</div></div></div><div class="panel"><div class="head"><div><h2>Deckstatus</h2><p>4 Decks je Spieler</p></div></div><div class="body">${deckStatusBox(selectedDay)}</div></div></aside><section class="panel"><div class="head"><div><h2>${matchTitle(selectedMatch)}</h2><p>Hier werden nur die Ergebnisse der 4 Einzelspiele eingetragen.</p></div><span class="status ${calcMatch(selectedDay,selectedMatch).resultDone===4?"done":"open"}">${calcMatch(selectedDay,selectedMatch).resultDone}/4</span></div><div class="body"><div class="grid">${matchEditor(selectedMatch)}</div></div></section></div>${inlineDayDeckEditor(selectedDay)}</div>`;
   wireInput();
   wireDeckEvents();
 }
-function deckStatusBox(day){return state.players.map((n,p)=>{const complete=playerDecks(p,day).length; const r=deckRuleReport(day,p); const dup=duplicateDeckReport(day,p); const cardDup=duplicateCardsAcrossDayReport(day,p); const cls=complete===4&&r.ok&&dup.ok&&cardDup.ok?"good":"warn"; return `<div class="notice ${cls}" style="margin-bottom:8px"><b>${esc(n)}</b><br>${complete}/4 Tagesdecks vollständig${day>1?` · ${r.highOverlapCount} von max. 2 Decks mit >5 gleichen Karten zum Vortag`:""}${dup.ok?"":" · doppeltes Tagesdeck"}${cardDup.ok?"":" · Karte mehrfach im Spieltag"}</div>`}).join("")}
+function deckStatusBox(day){return state.players.map((n,p)=>{const complete=playerDecks(p,day).length; const r=deckRuleReport(day,p); const dup=duplicateDeckReport(day,p); const cardDup=duplicateCardsAcrossDayReport(day,p); const cls=complete===4&&r.ok&&dup.ok&&cardDup.ok?"good":"warn"; return `<div class="notice ${cls}" style="margin-bottom:8px"><b>${esc(n)}</b><br>${complete}/4 Tagesdecks vollst盲ndig${day>1?` 路 ${r.highOverlapCount} von max. 2 Decks mit >5 gleichen Karten zum Vortag`:""}${dup.ok?"":" 路 doppeltes Tagesdeck"}${cardDup.ok?"":" 路 Karte mehrfach im Spieltag"}</div>`}).join("")}
 function matchTitle(mi){const [a,b]=pairings()[mi]; return `Match ${mi+1}: ${state.players[a]} vs. ${state.players[b]}`}
 function matchSelector(mi){const [a,b]=pairings()[mi], c=calcMatch(selectedDay,mi); return `<button class="match-card ${mi===selectedMatch?"active":""}" onclick="selectMatch(${mi})"><div class="mtitle"><span>${esc(state.players[a])} vs. ${esc(state.players[b])}</span><span class="status ${c.resultDone===4?"done":"open"}">${c.resultDone===4?"Fertig":"Offen"}</span></div><div class="scoreline"><span>${c.singleA} Siege</span><b>${c.totalA} : ${c.totalB}</b><span style="text-align:right">${c.singleB} Siege</span></div></button>`}
 function matchEditor(mi){const m=getMatch(selectedDay,mi), [ai,bi]=pairings()[mi]; return m.games.map((g,gi)=>`<div class="game"><div class="ghead"><h3>Einzelspiel ${gi+1}</h3><select class="select result" data-game="${gi}"><option value="" ${!g.result?"selected":""}>Ergebnis offen</option><option value="a" ${g.result==="a"?"selected":""}>${esc(state.players[ai])} gewinnt</option><option value="b" ${g.result==="b"?"selected":""}>${esc(state.players[bi])} gewinnt</option></select></div></div>`).join("")}
 function wireInput(){document.querySelectorAll(".result").forEach(s=>s.onchange=()=>{getMatch(selectedDay,selectedMatch).games[Number(s.dataset.game)].result=s.value;bump();renderInput()});}
-function inlineDayDeckEditor(day){return `<section class="panel"><div class="head"><div><h2>Decks für diesen Spieltag</h2><p>Unter der Ergebnis-Eingabe: 4 feste Tagesdecks pro Spieler. Du kannst Decks kopieren und an anderen Spieltagen einfügen.</p></div></div><div class="body"><div class="deckday">${state.players.map((n,p)=>playerDeckEditor(day,p)).join("")}</div></div></section>`}
-function renderDecks(){selectedDay=Math.min(selectedDay,dayCount()); const when=formatDayDate(selectedDay); document.getElementById("page-decks").innerHTML=`<div class="grid"><div class="panel"><div class="head"><div><h2>Spieltag-Decks · ${esc(dayLabel(selectedDay))}</h2><p>${when?esc(when):"Für jeden Spieler genau 4 feste Decks pro Spieltag. Decks können kopiert und an anderen Spieltagen eingefügt werden."}</p></div><button class="btn good" onclick="manualSave()">Speichern</button></div><div class="body">${dayStrip()}<div class="notice warn" style="margin-top:12px">Die gleiche Deckeingabe ist auch unter der Ergebnis-Eingabe sichtbar. Ähnliche Vortagsdecks sind optional: 0, 1 oder maximal 2 Decks mit mehr als 5 gleichen Karten zum Vortag sind erlaubt.</div></div></div><div class="panel"><div class="head"><div><h2>Decklisten</h2><p>4 Decks pro Spieler mit Kartenbildern und Ø-Elixier.</p></div></div><div class="body"><div class="deckday">${state.players.map((n,p)=>playerDeckEditor(selectedDay,p)).join("")}</div></div></div></div>`; wireDeckEvents();}
+function inlineDayDeckEditor(day){return `<section class="panel"><div class="head"><div><h2>Decks f眉r diesen Spieltag</h2><p>Unter der Ergebnis-Eingabe: 4 feste Tagesdecks pro Spieler. Du kannst Decks kopieren und an anderen Spieltagen einf眉gen.</p></div></div><div class="body"><div class="deckday">${state.players.map((n,p)=>playerDeckEditor(day,p)).join("")}</div></div></section>`}
+function renderDecks(){selectedDay=Math.min(selectedDay,dayCount()); const when=formatDayDate(selectedDay); document.getElementById("page-decks").innerHTML=`<div class="grid"><div class="panel"><div class="head"><div><h2>Spieltag-Decks 路 ${esc(dayLabel(selectedDay))}</h2><p>${when?esc(when):"F眉r jeden Spieler genau 4 feste Decks pro Spieltag. Decks k枚nnen kopiert und an anderen Spieltagen eingef眉gt werden."}</p></div><button class="btn good" onclick="manualSave()">Speichern</button></div><div class="body">${dayStrip()}<div class="notice warn" style="margin-top:12px">Die gleiche Deckeingabe ist auch unter der Ergebnis-Eingabe sichtbar. 脛hnliche Vortagsdecks sind optional: 0, 1 oder maximal 2 Decks mit mehr als 5 gleichen Karten zum Vortag sind erlaubt.</div></div></div><div class="panel"><div class="head"><div><h2>Decklisten</h2><p>4 Decks pro Spieler mit Kartenbildern und 脴-Elixier.</p></div></div><div class="body"><div class="deckday">${state.players.map((n,p)=>playerDeckEditor(selectedDay,p)).join("")}</div></div></div></div>`; wireDeckEvents();}
 function playerDeckEditor(day,p){
   const dd=getDayDecks(day)[p]; const r=deckRuleReport(day,p), dup=duplicateDeckReport(day,p);
   const notices=[]; 
@@ -1031,7 +1031,7 @@ function playerDeckEditor(day,p){
   const cardDup=duplicateCardsAcrossDayReport(day,p);
   notices.push(`<span class="pill ${dup.ok?"good":"danger"}">${dup.ok?"keine Deck-Duplikate":"Deck-Duplikat"}</span>`);
   notices.push(`<span class="pill ${cardDup.ok?"good":"danger"}">${cardDup.ok?"Karten 1x":"Karte mehrfach"}</span>`);
-  notices.push(`<span class="pill ${playerDecks(p,day).length===4?"good":"warn"}">${playerDecks(p,day).length}/4 vollständig</span>`);
+  notices.push(`<span class="pill ${playerDecks(p,day).length===4?"good":"warn"}">${playerDecks(p,day).length}/4 vollst盲ndig</span>`);
   return `<section class="player-decks"><div class="player-head"><h3>${esc(state.players[p])}</h3><div class="row">${notices.join("")}</div></div><div class="decklist">${dd.map((deck,di)=>deckBox(day,p,di,deck)).join("")}</div></section>`;
 }
 function deckRuleNote(day,p,di,deck){
@@ -1041,7 +1041,7 @@ function deckRuleNote(day,p,di,deck){
   if(high){
     const cls=r.limitOk?"warn":"danger";
     const word=high.maxOverlap===8?"8/8 identisch":`${high.maxOverlap}/8 gleiche Karten`;
-    if(r.limitOk) return `<div class="notice ${cls} overlap-warn">Zählt als erlaubtes ähnliches Vortagsdeck: ${word} wie Vortag-Deck ${high.previous.map(x=>x+1).join(", ")}. Insgesamt ${r.highOverlapCount} von maximal 2 Decks mit mehr als 5 gleichen Karten.</div>`;
+    if(r.limitOk) return `<div class="notice ${cls} overlap-warn">Z盲hlt als erlaubtes 盲hnliches Vortagsdeck: ${word} wie Vortag-Deck ${high.previous.map(x=>x+1).join(", ")}. Insgesamt ${r.highOverlapCount} von maximal 2 Decks mit mehr als 5 gleichen Karten.</div>`;
     return `<div class="notice ${cls} overlap-warn">Regel verletzt: Dieses Deck hat ${word} wie Vortag-Deck ${high.previous.map(x=>x+1).join(", ")}. Insgesamt sind es ${r.highOverlapCount} Decks mit mehr als 5 gleichen Karten; erlaubt sind maximal 2.</div>`;
   }
   return `<div class="notice good overlap-warn">Regelvergleich zum Vortag ok: maximal 5 gleiche Karten zu jedem Vortagsdeck.</div>`;
@@ -1050,7 +1050,7 @@ function deckBox(day,p,di,deck){
   const a=avg(deck), prob=problem(deck), validNames=deck.map(valid), dupIdx=duplicateCardIndices(deck), crossDupIdx=duplicateCardIndicesAcrossDay(day,p,di);
   const inputs=Array.from({length:8},(_,i)=>`<input class="input deckcard ${dupIdx.has(i)?"dup-input":""} ${crossDupIdx.has(i)?"cross-dup-input":""}" readonly placeholder="Karte ${i+1}" value="${esc(deck[i]||"")}" data-player="${p}" data-deck="${di}" data-slot="${i}">`).join("");
   const cards=Array.from({length:8},(_,i)=>cardHtmlWithFlags(validNames[i], dupIdx.has(i), crossDupIdx.has(i))).join("");
-  return `<div class="deck"><div class="decktop"><h4>Deck ${di+1}</h4><div class="deck-actions"><button class="btn small ghost" onclick="copyDeck(${p},${di})">Kopieren</button><button class="btn small ghost" onclick="pasteDeck(${p},${di})">Einfügen</button><div class="elixir">⚡ <span>${formatAvg(a)}</span></div></div></div><div class="inputs">${inputs}</div><div class="preview">${cards}</div><div class="note ${prob&&prob!=="Noch nicht vollständig."?"bad":(!prob?"ok":"")}">${prob||"Vollständiges Tagesdeck gespeichert."}</div>${deckRuleNote(day,p,di,deck)}</div>`;
+  return `<div class="deck"><div class="decktop"><h4>Deck ${di+1}</h4><div class="deck-actions"><button class="btn small ghost" onclick="copyDeck(${p},${di})">Kopieren</button><button class="btn small ghost" onclick="pasteDeck(${p},${di})">Einf眉gen</button><div class="elixir">鈿?<span>${formatAvg(a)}</span></div></div></div><div class="inputs">${inputs}</div><div class="preview">${cards}</div><div class="note ${prob&&prob!=="Noch nicht vollst盲ndig."?"bad":(!prob?"ok":"")}">${prob||"Vollst盲ndiges Tagesdeck gespeichert."}</div>${deckRuleNote(day,p,di,deck)}</div>`;
 }
 function copyDeck(p,di){
   const deck=getDayDecks(selectedDay)[p][di];
@@ -1060,7 +1060,7 @@ function copyDeck(p,di){
 function pasteDeck(p,di){
   if(!copiedDeck || !Array.isArray(copiedDeck.deck)){showToast("Noch kein Deck kopiert"); return;}
   getDayDecks(selectedDay)[p][di]=[...copiedDeck.deck];
-  showToast("Deck eingefügt");
+  showToast("Deck eingef眉gt");
   bump(false);
   if(tab==="input") renderInput(); else renderDecks();
 }
@@ -1084,8 +1084,8 @@ function renderPickerGrid(q){
   document.getElementById("pickerGrid").innerHTML=list.map(c=>`<button class="pick-card" data-card="${esc(c.name)}">${cardHtml(c.key)}<b>${esc(c.name)}</b></button>`).join("");
   document.querySelectorAll(".pick-card").forEach(btn=>btn.onclick=()=>{if(activePickerInput)setDeckCard(activePickerInput, btn.dataset.card)});
 }
-function renderCards(){document.getElementById("page-cards").innerHTML=`<div class="panel"><div class="head"><div><h2>Kartenübersicht</h2><p>${CARDS.length} Karten mit Elixierkosten.</p></div><input id="search" class="input" style="max-width:320px" placeholder="Karte suchen"></div><div class="body"><div class="lib" id="lib">${libHtml(CARDS)}</div></div></div>`; const s=document.getElementById("search"); if(s)s.oninput=()=>{const q=s.value.toLowerCase();document.getElementById("lib").innerHTML=libHtml(CARDS.filter(c=>c.name.toLowerCase().includes(q)||c.rarity.toLowerCase().includes(q)))}}
-function libHtml(list){return list.map(c=>`<div class="libcard">${cardHtml(c.key)}<b>${esc(c.name)}</b><span>⚡ ${c.elixir} · ${esc(c.rarity)}</span></div>`).join("")}
+function renderCards(){document.getElementById("page-cards").innerHTML=`<div class="panel"><div class="head"><div><h2>Karten眉bersicht</h2><p>${CARDS.length} Karten mit Elixierkosten.</p></div><input id="search" class="input" style="max-width:320px" placeholder="Karte suchen"></div><div class="body"><div class="lib" id="lib">${libHtml(CARDS)}</div></div></div>`; const s=document.getElementById("search"); if(s)s.oninput=()=>{const q=s.value.toLowerCase();document.getElementById("lib").innerHTML=libHtml(CARDS.filter(c=>c.name.toLowerCase().includes(q)||c.rarity.toLowerCase().includes(q)))}}
+function libHtml(list){return list.map(c=>`<div class="libcard">${cardHtml(c.key)}<b>${esc(c.name)}</b><span>鈿?${c.elixir} 路 ${esc(c.rarity)}</span></div>`).join("")}
 
 function bEscArg(s){return String(s).replace(/\\/g,"\\\\").replace(/'/g,"\\'");}
 function builderToggle(card,mode){
@@ -1165,7 +1165,7 @@ function buildHybridDeck(){
   }:null;
 }
 function buildDeckSuggestion(next=false){
-  // Wichtig: Auch ein erneuter Klick auf „Deck bauen“ soll nach einem vorhandenen Vorschlag
+  // Wichtig: Auch ein erneuter Klick auf 鈥濪eck bauen鈥?soll nach einem vorhandenen Vorschlag
   // ein neues Deck mit denselben Kriterien erzeugen.
   if(next || builderState.generated) builderState.attempt++;
   if(builderState.include.length>8){showToast("Zu viele Pflichtkarten");return;}
@@ -1190,7 +1190,7 @@ function buildDeckSuggestion(next=false){
     return;
   }
 
-  // Wenn nur ein exaktes Profi-Deck passt oder der Nutzer ein weiteres Deck möchte,
+  // Wenn nur ein exaktes Profi-Deck passt oder der Nutzer ein weiteres Deck m枚chte,
   // wird ein neuer Hybrid-Vorschlag gebaut, der Pflicht-/Ausschlusskarten weiterhin beachtet.
   const h=buildHybridDeck();
   if(h){builderState.generated=h;renderBuilder();return;}
@@ -1204,12 +1204,12 @@ function buildDeckSuggestion(next=false){
   showToast("Mit diesen Kriterien konnte kein Deck gebaut werden");
 }
 function copyBuiltDeck(){if(!builderState.generated){showToast("Noch kein Deck gebaut");return;} copiedDeck={deck:[...builderState.generated.cards],player:null,deckIndex:null,day:selectedDay}; showToast("Deckbauer-Deck kopiert");}
-function chips(list,cls){return `<div class="builder-selected">${list.length?list.map(c=>`<span class="chip ${cls}">${esc(c)}</span>`).join(""):`<span class="builder-mini">Keine ausgewählt.</span>`}</div>`;}
+function chips(list,cls){return `<div class="builder-selected">${list.length?list.map(c=>`<span class="chip ${cls}">${esc(c)}</span>`).join(""):`<span class="builder-mini">Keine ausgew盲hlt.</span>`}</div>`;}
 function builderGrid(mode){const selected=new Set(mode==="include"?builderState.include:builderState.exclude);const other=new Set(mode==="include"?builderState.exclude:builderState.include);return `<div class="builder-card-grid">${CARDS.map(c=>{const cls=selected.has(c.name)?mode:(other.has(c.name)?"exclude":"");const mark=selected.has(c.name)?(mode==="include"?"MUSS":"RAUS"):"";return `<button class="builder-card-choice ${cls}" onclick="builderToggle('${bEscArg(c.name)}','${mode}')">${mark?`<span class="mark">${mark}</span>`:""}${cardHtml(c.key)}<b>${esc(c.name)}</b></button>`;}).join("")}</div>`;}
 function builderResult(){
-  const g=builderState.generated; if(!g)return `<div class="notice">Noch kein Deck gebaut. Wähle optional Pflichtkarten/Ausschlüsse und drücke „Deck bauen“.</div>`;
+  const g=builderState.generated; if(!g)return `<div class="notice">Noch kein Deck gebaut. W盲hle optional Pflichtkarten/Ausschl眉sse und dr眉cke 鈥濪eck bauen鈥?</div>`;
   const bad=g.cards.filter(c=>builderState.exclude.includes(c)); const miss=builderState.include.filter(c=>!g.cards.includes(c));
-  return `<div class="panel"><div class="head"><div><h2>${esc(g.name)}</h2><p>${esc(g.source||"Deckbauer")} · Ø-Elixier ${formatAvg(avg(g.cards))} · ${g.hybrid?"Hybrid-Vorschlag":"Profi-Deck-Vorlage"}</p></div></div><div class="body"><div class="built-deck">${g.cards.map(c=>cardHtml(c)).join("")}</div>${miss.length?`<div class="notice danger" style="margin-top:12px">Fehlende Pflichtkarten: ${miss.map(esc).join(", ")}</div>`:""}${bad.length?`<div class="notice danger" style="margin-top:12px">Enthält ausgeschlossene Karten: ${bad.map(esc).join(", ")}</div>`:""}<div class="builder-result-actions"><button class="btn primary" onclick="buildDeckSuggestion(false)">Deck bauen</button><button class="btn" onclick="buildDeckSuggestion(true)">Neues Deck erstellen</button><button class="btn good" onclick="copyBuiltDeck()">Deck kopieren</button><button class="btn" onclick="tab='input';renderAll()">Zur Eingabe</button></div><p class="builder-mini">„Deck bauen“ und „Neues Deck erstellen“ erzeugen jetzt weitere Vorschläge mit denselben Kriterien. Nach „Deck kopieren“ kannst du bei einem Spieltag in einem Deck-Slot auf „Einfügen“ klicken.</p></div></div>`;
+  return `<div class="panel"><div class="head"><div><h2>${esc(g.name)}</h2><p>${esc(g.source||"Deckbauer")} 路 脴-Elixier ${formatAvg(avg(g.cards))} 路 ${g.hybrid?"Hybrid-Vorschlag":"Profi-Deck-Vorlage"}</p></div></div><div class="body"><div class="built-deck">${g.cards.map(c=>cardHtml(c)).join("")}</div>${miss.length?`<div class="notice danger" style="margin-top:12px">Fehlende Pflichtkarten: ${miss.map(esc).join(", ")}</div>`:""}${bad.length?`<div class="notice danger" style="margin-top:12px">Enth盲lt ausgeschlossene Karten: ${bad.map(esc).join(", ")}</div>`:""}<div class="builder-result-actions"><button class="btn primary" onclick="buildDeckSuggestion(false)">Deck bauen</button><button class="btn" onclick="buildDeckSuggestion(true)">Neues Deck erstellen</button><button class="btn good" onclick="copyBuiltDeck()">Deck kopieren</button><button class="btn" onclick="tab='input';renderAll()">Zur Eingabe</button></div><p class="builder-mini">鈥濪eck bauen鈥?und 鈥濶eues Deck erstellen鈥?erzeugen jetzt weitere Vorschl盲ge mit denselben Kriterien. Nach 鈥濪eck kopieren鈥?kannst du bei einem Spieltag in einem Deck-Slot auf 鈥濫inf眉gen鈥?klicken.</p></div></div>`;
 }
 
 
@@ -1236,13 +1236,13 @@ function selectedExcludeDeckPreview(){
     return state.players.map((name,p)=>{
       const deck=dd[p]?.[deckIndex]||[];
       const valid=deck.filter(c=>CARD_BY_NAME[c]);
-      return `<div class="notice" style="margin-top:10px"><b>${esc(name)} · Deck ${deckIndex+1}</b>${valid.length?`<div class="deck-exclude-preview">${deck.map(c=>cardHtml(c)).join("")}</div>`:`<div class="deck-exclude-empty">Noch kein vollständiges Deck eingetragen.</div>`}</div>`;
+      return `<div class="notice" style="margin-top:10px"><b>${esc(name)} 路 Deck ${deckIndex+1}</b>${valid.length?`<div class="deck-exclude-preview">${deck.map(c=>cardHtml(c)).join("")}</div>`:`<div class="deck-exclude-empty">Noch kein vollst盲ndiges Deck eingetragen.</div>`}</div>`;
     }).join("");
   }
   const p=Number(builderState.excludePlayer);
   const deck=dd[p]?.[deckIndex]||[];
   const valid=deck.filter(c=>CARD_BY_NAME[c]);
-  return `<div class="notice" style="margin-top:8px"><b>${esc(state.players[p])} · ${esc(dayLabel(day))} · Deck ${deckIndex+1}</b>${valid.length?`<div class="deck-exclude-preview">${deck.map(c=>cardHtml(c)).join("")}</div>`:`<div class="deck-exclude-empty">Noch kein vollständiges Deck eingetragen.</div>`}</div>`;
+  return `<div class="notice" style="margin-top:8px"><b>${esc(state.players[p])} 路 ${esc(dayLabel(day))} 路 Deck ${deckIndex+1}</b>${valid.length?`<div class="deck-exclude-preview">${deck.map(c=>cardHtml(c)).join("")}</div>`:`<div class="deck-exclude-empty">Noch kein vollst盲ndiges Deck eingetragen.</div>`}</div>`;
 }
 function updateDeckExcludeSelector(field,value){
   if(field==="day") builderState.excludeDay=Math.max(1,Math.min(dayCount(),Number(value||1)));
@@ -1274,8 +1274,8 @@ function playedCardPanel(){
   const deckIndex=Math.max(0,Math.min(3,Number(builderState.excludeDeck||0)));
   return `<div class="played-card-tools">
     <div class="notice warn">
-      <b>Decks von Spieltag ausschließen</b><br>
-      Wähle einen Spieltag, optional einen Spieler, und Deck 1–4. Danach werden genau die Karten aus dieser Auswahl in „Ausschließen“ übernommen.
+      <b>Decks von Spieltag ausschlie脽en</b><br>
+      W盲hle einen Spieltag, optional einen Spieler, und Deck 1鈥?. Danach werden genau die Karten aus dieser Auswahl in 鈥濧usschlie脽en鈥?眉bernommen.
     </div>
     <div class="deck-exclude-selector">
       <label>Spieltag
@@ -1295,7 +1295,7 @@ function playedCardPanel(){
         </select>
       </label>
       <div class="row" style="align-self:end">
-        <button class="btn small danger" onclick="excludeSelectedPlayedDeck()">Auswahl ausschließen</button>
+        <button class="btn small danger" onclick="excludeSelectedPlayedDeck()">Auswahl ausschlie脽en</button>
         <button class="btn small" onclick="removeSelectedPlayedDeckFromExclude()">Aus Ausschluss entfernen</button>
       </div>
     </div>
@@ -1305,17 +1305,17 @@ function playedCardPanel(){
 
 function renderBuilder(){
   const el=document.getElementById("page-builder"); if(!el)return;
-  el.innerHTML=`<div class="grid"><div class="panel"><div class="head"><div><h2>Deckbauer</h2></div></div><div class="body"><div class="builder-controls"><div><div class="row"><h3 style="margin:0">Muss enthalten sein</h3><button class="btn small" onclick="builderClear('include')">Leeren</button></div>${chips(builderState.include,"good")}${builderGrid("include")}</div><div><div class="row"><h3 style="margin:0">Ausschließen</h3><button class="btn small" onclick="builderClear('exclude')">Leeren</button></div>${chips(builderState.exclude,"danger")}${builderGrid("exclude")}</div></div><div class="builder-result-actions"><button class="btn primary" onclick="buildDeckSuggestion(false)">Deck bauen</button><button class="btn" onclick="buildDeckSuggestion(true)">Neues Deck erstellen</button></div>${playedCardPanel()}</div></div>${builderResult()}</div>`;
+  el.innerHTML=`<div class="grid"><div class="panel"><div class="head"><div><h2>Deckbauer</h2></div></div><div class="body"><div class="builder-controls"><div><div class="row"><h3 style="margin:0">Muss enthalten sein</h3><button class="btn small" onclick="builderClear('include')">Leeren</button></div>${chips(builderState.include,"good")}${builderGrid("include")}</div><div><div class="row"><h3 style="margin:0">Ausschlie脽en</h3><button class="btn small" onclick="builderClear('exclude')">Leeren</button></div>${chips(builderState.exclude,"danger")}${builderGrid("exclude")}</div></div><div class="builder-result-actions"><button class="btn primary" onclick="buildDeckSuggestion(false)">Deck bauen</button><button class="btn" onclick="buildDeckSuggestion(true)">Neues Deck erstellen</button></div>${playedCardPanel()}</div></div>${builderResult()}</div>`;
 }
 
 function renderSettings(){
   const link=location.origin+location.pathname+"?turnier="+encodeURIComponent(tournamentId);
   document.getElementById("page-settings").innerHTML=`<div class="grid">
-    <div class="panel"><div class="head"><div><h2>Turnier & Grunddaten</h2><p>Hier kannst du Namen, Anzahl der Spieltage, Hin-/Rückrunde und Spieltag-Termine frei ändern.</p></div><button class="btn good" onclick="manualSave()">Speichern</button></div><div class="body"><div class="settingsgrid"><label>Turniername<input class="input settinginput" data-setting="tournamentName" value="${esc(state.settings.tournamentName||"")}" placeholder="Turniername"></label><label>Anzahl Spieltage<input class="input numberinput" type="number" min="1" max="40" data-setting="dayCount" value="${dayCount()}"></label><label>Hinrunde bis Spieltag<input class="input numberinput" type="number" min="0" max="${dayCount()}" data-setting="firstRoundDays" value="${esc(state.settings.firstRoundDays)}"></label></div><div class="notice warn" style="margin-top:14px">Eingabefelder bleiben jetzt aktiv; die Seite lädt beim Tippen nicht mehr neu.</div></div></div>
-    <div class="panel"><div class="head"><div><h2>Spieler-Namen</h2><p>Alle 4 Namen sind frei änderbar und werden überall übernommen.</p></div></div><div class="body"><div class="players">${state.players.map((p,i)=>`<label>Spieler ${i+1}<input class="input pname" data-index="${i}" value="${esc(p)}" placeholder="Name"></label>`).join("")}</div></div></div>
+    <div class="panel"><div class="head"><div><h2>Turnier & Grunddaten</h2><p>Hier kannst du Namen, Anzahl der Spieltage, Hin-/R眉ckrunde und Spieltag-Termine frei 盲ndern.</p></div><button class="btn good" onclick="manualSave()">Speichern</button></div><div class="body"><div class="settingsgrid"><label>Turniername<input class="input settinginput" data-setting="tournamentName" value="${esc(state.settings.tournamentName||"")}" placeholder="Turniername"></label><label>Anzahl Spieltage<input class="input numberinput" type="number" min="1" max="40" data-setting="dayCount" value="${dayCount()}"></label><label>Hinrunde bis Spieltag<input class="input numberinput" type="number" min="0" max="${dayCount()}" data-setting="firstRoundDays" value="${esc(state.settings.firstRoundDays)}"></label></div><div class="notice warn" style="margin-top:14px">Eingabefelder bleiben jetzt aktiv; die Seite l盲dt beim Tippen nicht mehr neu.</div></div></div>
+    <div class="panel"><div class="head"><div><h2>Spieler-Namen</h2><p>Alle 4 Namen sind frei 盲nderbar und werden 眉berall 眉bernommen.</p></div></div><div class="body"><div class="players">${state.players.map((p,i)=>`<label>Spieler ${i+1}<input class="input pname" data-index="${i}" value="${esc(p)}" placeholder="Name"></label>`).join("")}</div></div></div>
     <div class="panel"><div class="head"><div><h2>Spieltage planen</h2><p>Pro Spieltag eigener Name, Datum, Uhrzeit und Notiz.</p></div></div><div class="body"><div class="grid">${Array.from({length:dayCount()},(_,i)=>dayForm(i+1)).join("")}</div></div></div>
-    <div class="panel"><div class="head"><div><h2>Teilen & Speicherstand</h2><p>Link an eure Mitspieler schicken. Diese Version lädt auf GitHub Pages automatisch ./data.json. Deinen Stand kannst du zusätzlich weiterhin über Import/Export sichern.</p></div></div><div class="body"><div class="help"><div class="helpcard"><h3>Online-Sync</h3><p>Status: <b>${cloudMode&&remoteReady?"verbunden":"lokal / noch nicht eingerichtet"}</b>. Diese Handy-Datei speichert lokal im Browser.</p></div><div class="helpcard"><h3>iPhone-App</h3><p>HTML-Datei am iPhone öffnen, Teilen-Symbol antippen und „Zum Home-Bildschirm“ wählen.</p></div><div class="helpcard"><h3>Backup</h3><p>Zusätzlich könnt ihr jederzeit eine JSON-Sicherung exportieren und wieder importieren.</p></div></div><div class="row" style="margin-top:16px"><button class="btn primary" onclick="copyLink()">Turnier-Link kopieren</button><button class="btn good" onclick="shareLink()">Link teilen</button><button class="btn" onclick="exportBackup()">Backup exportieren</button><button class="btn" onclick="document.getElementById('importFile').click()">Backup importieren</button><button class="btn good" onclick="reloadAutoDataJson()">data.json neu laden</button><button class="btn warn" onclick="restoreEmbeddedState()">Eingebetteten Stand laden</button></div><div class="notice" style="margin-top:16px;overflow-wrap:anywhere">Turnier-Link:<br><b>${esc(link)}</b></div></div></div>
-    <div class="panel"><div class="head"><div><h2>Zurücksetzen</h2><p>Vorsicht: Wenn online verbunden, wird auch der gemeinsame Stand überschrieben.</p></div></div><div class="body"><button class="btn danger" onclick="resetAll()">Alles löschen</button></div></div>
+    <div class="panel"><div class="head"><div><h2>Teilen & Speicherstand</h2><p>Link an eure Mitspieler schicken. Diese Version l盲dt auf GitHub Pages automatisch ./data.json. Deinen Stand kannst du zus盲tzlich weiterhin 眉ber Import/Export sichern.</p></div></div><div class="body"><div class="help"><div class="helpcard"><h3>Online-Sync</h3><p>Status: <b>${cloudMode&&remoteReady?"verbunden":"lokal / noch nicht eingerichtet"}</b>. Diese Handy-Datei speichert lokal im Browser.</p></div><div class="helpcard"><h3>iPhone-App</h3><p>HTML-Datei am iPhone 枚ffnen, Teilen-Symbol antippen und 鈥瀂um Home-Bildschirm鈥?w盲hlen.</p></div><div class="helpcard"><h3>Backup</h3><p>Zus盲tzlich k枚nnt ihr jederzeit eine JSON-Sicherung exportieren und wieder importieren.</p></div></div><div class="row" style="margin-top:16px"><button class="btn primary" onclick="copyLink()">Turnier-Link kopieren</button><button class="btn good" onclick="shareLink()">Link teilen</button><button class="btn" onclick="exportBackup()">Backup exportieren</button><button class="btn" onclick="document.getElementById('importFile').click()">Backup importieren</button><button class="btn good" onclick="reloadAutoDataJson()">data.json neu laden</button><button class="btn warn" onclick="restoreEmbeddedState()">Eingebetteten Stand laden</button></div><div class="notice" style="margin-top:16px;overflow-wrap:anywhere">Turnier-Link:<br><b>${esc(link)}</b></div></div></div>
+    <div class="panel"><div class="head"><div><h2>Zur眉cksetzen</h2><p>Vorsicht: Wenn online verbunden, wird auch der gemeinsame Stand 眉berschrieben.</p></div></div><div class="body"><button class="btn danger" onclick="resetAll()">Alles l枚schen</button></div></div>
   </div>`;
   wireSettings();
 }
@@ -1338,7 +1338,7 @@ function wireSettings(){
 }
 
 function restoreEmbeddedState(){
-  if(!confirm("Diesen eingebetteten WhatsApp-Stand wiederherstellen? Lokale Änderungen auf diesem Gerät werden überschrieben.")) return;
+  if(!confirm("Diesen eingebetteten WhatsApp-Stand wiederherstellen? Lokale 脛nderungen auf diesem Ger盲t werden 眉berschrieben.")) return;
   state=migrate(JSON.parse(JSON.stringify(EMBEDDED_SAVE_STATE || defaultState())));
   selectedDay=1; selectedMatch=0;
   saveLocal();
@@ -1352,7 +1352,7 @@ function fullLink(){return location.origin+location.pathname+"?turnier="+encodeU
 async function copyLink(){try{await navigator.clipboard.writeText(fullLink()); showToast("Link kopiert")}catch(e){prompt("Turnier-Link kopieren:", fullLink())}}
 async function shareLink(){if(navigator.share){try{await navigator.share({title:state.settings.tournamentName||"Clash Royale Turnier", text:"Hier ist unser Clash-Royale-Turniertracker:", url:fullLink()})}catch(e){}}else copyLink()}
 function manualSave(){saveLocal(); writeCloud(); showToast("Gespeichert")}
-function resetAll(){if(!confirm("Wirklich alles löschen?"))return; state=defaultState(); selectedDay=1; selectedMatch=0; bump(); renderAll()}
+function resetAll(){if(!confirm("Wirklich alles l枚schen?"))return; state=defaultState(); selectedDay=1; selectedMatch=0; bump(); renderAll()}
 function wire(){
   document.getElementById("saveBtn").onclick=manualSave; document.getElementById("shareBtn").onclick=shareLink; document.getElementById("exportBtn").onclick=exportBackup; document.getElementById("importBtn").onclick=()=>document.getElementById("importFile").click(); document.getElementById("importFile").onchange=e=>{const f=e.target.files?.[0]; if(f)importFile(f); e.target.value=""};
   document.getElementById("mInput").onclick=()=>{tab="input";renderAll()};
